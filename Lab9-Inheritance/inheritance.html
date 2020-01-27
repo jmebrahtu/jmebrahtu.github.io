@@ -1,16 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Basic Java Script</title>
-    <!-- This assignment is practising basic java script and how to interact with google chrome developer console  -->
 
-    <script src="inheritance.js"></script>
+<head>
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+
+    <script src="inheritance.js"> </script>
 </head>
+
 <body>
-<div>
-    <p>Look in the Chrome developer console to see the output. Press option + command + J</p>
-</div>
-</div>
+
+<!-- the script with tests (describe, it...) -->
+<!-- <script src="test.js"></script>
+<script src="calculatorTest.js"></script> -->
+
+<!-- the element with id="mocha" will contain test results -->
+<div id="mocha"></div>
+
+<!-- run tests! -->
+<script>
+    mocha.run();
+</script>
 </body>
 </html>
