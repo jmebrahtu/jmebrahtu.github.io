@@ -8,7 +8,14 @@ Function.prototype.defer = function(delay){
 }
 
 function f() {
-    alert("Hello!");
+   /* alert("Hello!");*/
+    return "Maharishi";
 }
 
 f.defer(1000); // shows "Hello!" after 1 second
+
+describe("Defer function", function(){
+    it("calling f() should return Maharishi", function(){
+        assert.equal(f(), "Mahaishi")
+    });
+});
